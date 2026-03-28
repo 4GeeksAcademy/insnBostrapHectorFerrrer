@@ -13,203 +13,296 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container d-flex">
-            <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+<nav class="navbar navbar-expand bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-1" href="#">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="bi bi-instagram"></i><span>Instagram</span>
             </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#"></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"></a>
+        </li>
+      </ul>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success me-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create a new post
+      </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item active">
-                          <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary pintd" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                create a new post
-                </button>
-                        <div class ="container d-flex"> 
-               
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                             <div class="modal-content">
-                                <div class="modal-header">
-                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo Modal</h1>
-                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                             Un mensaje para tÍ
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-              
-                     </div> 
-                    </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Mi mensaje para ti
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
                     
-                  <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle greis" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-gear-wide-connected"></i>
-                        </button>
-
-                        <ul class="dropdown-content dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Acción 1</a></li>
-                            <li><a class="dropdown-item" href="#">Acción 2</a></li>
-                            <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
-                        </ul>
-                    </div> 
-                     
-                     
-    </nav>
+          <div class="btn-group">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                 <i class="bi bi-gear-wide-connected"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><button class="dropdown-item" type="button">Action</button></li>
+                <li><button class="dropdown-item" type="button">Another action</button></li>
+                <li><button class="dropdown-item" type="button">Something else here</button></li>
+              </ul>
+         </div>
 
 
-    <!---------------------------------fin de navar-->
+      </div>
+    </div>
+  </div>
+</nav>
 
 
-<div class="container my-5">
-  
-  <div class="d-flex justify-content-center mb-4 gap-3">
-    <button id="btnNormal" class="btn btn-primary rounded-pill px-4 shadow-sm border-0">
-      <i class="draw2 bi bi-grid-3x3 mt-3"></i> 
+<ul class="nav nav-tabs justify-content-center border-0 pt-2" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-pills active btn btn-outline-primary rounded-pill px-4 shadow-sm border-0" id="vista1-tab" data-bs-toggle="tab" data-bs-target="#vista1" type="button" role="tab" aria-controls="vista1" aria-selected="true">
+      <i class="draw2 bi bi-grid-3x3 mt-3"></i>
     </button>
-    
-    <button id="btnGrid" class="btn btn-outline-secondary rounded-pill px-4 shadow-sm border-0">
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-pills btn btn-outline-primary rounded-pill px-4 shadow-sm border-0" id="vista2-tab" data-bs-toggle="tab" data-bs-target="#vista2" type="button" role="tab" aria-controls="vista2" aria-selected="false">
       <i class="draw1 bi bi-square-fill mt-3"></i>
     </button>
+  </li>
+</ul>
+
+<!-- 2. Contenido de las pestañas -->
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="vista1" role="tabpanel" aria-labelledby="vista1-tab">
+  
+          <div class="container my-5">
+        
+
+        <div id="contenedor" class="row g-4">
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">1/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=2" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">2/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=3" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">3/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=4" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div id="contenedor" class="row g-4 pt-4">
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">4/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=5" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">5/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=7" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">6/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=6" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+      </div>
+
+      <div id="contenedor" class="row g-4 pt-4">
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">7/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=7" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">8/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=8" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-item col-12">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <div class="card-body detail-text d-flex">
+                    <h2 style="width: 95%;">Titulo</h2><p class="text-end">9/9</p>
+                  </div>
+                  <img src="https://picsum.photos/1200/500?random=9" class="img-fluid" alt="Imagen">
+                  <div class="card-body detail-text">
+                    <h5>Vista Detallada Activa</h5>
+                    <p>Este texto se oculta en modo rejilla.</p>
+                  </div>
+                </div>
+              </div>
+      </div>
+
+      </div>
   </div>
-
-  <div id="contenedor" class="row g-4">
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">1/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=2" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
+  <div class="tab-pane fade" id="vista2" role="tabpanel" aria-labelledby="vista2-tab">
+    <div class="tab-content" id="myTabContent">
+  
+  
+          <div class="container my-5 tab-pane fade show active" id="vista1" role="tabpanel" aria-labelledby="vista1-tab">
         
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-             <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">2/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=3" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
-        
+        <div id="contenedor" class="row g-4">
+              <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=1" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">3/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=4" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
- </div>
- <div id="contenedor" class="row g-4 pt-4">
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">4/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=5" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
-        
+               <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=2" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">5/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=7" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
-        
+               <div class="col-item col-12 col-md-4 ">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=3" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+      </div>
+         <div id="contenedor" class="row g-4 mt-2">
+              <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=4" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">6/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=6" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
- </div>
+               <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shado">
+                  <img src="https://picsum.photos/1200/500?random=5" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
-<div id="contenedor" class="row g-4 pt-4">
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">7/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=7" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
-        
+               <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=6" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+      </div>
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">8/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=8" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
-        
+         <div id="contenedor" class="row g-4 mt-2">
+              <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=7" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
-        <div class="col-item col-12">
-          <div class="card rounded-4 overflow-hidden border-0 shadow">
-            <div class="card-body detail-text d-flex">
-              <h2 style="width: 95%;">Titulo</h2><p class="text-end">9/9</p>
-            </div>
-            <img src="https://picsum.photos/1200/500?random=9" class="img-fluid" alt="Imagen">
-            <div class="card-body detail-text">
-              <h5>Vista Detallada Activa</h5>
-              <p>Este texto se oculta en modo rejilla.</p>
-            </div>
-          </div>
-        </div>
- </div>
+               <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow style = height:250px">
+                  <img src="https://picsum.photos/1200/500?random=8" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+              
 
+               <div class="col-item col-12 col-md-4">
+                <div class="card rounded-4 overflow-hidden border-0 shadow">
+                  <img src="https://picsum.photos/1200/500?random=9" class="img-fluid" alt="Imagen">      
+                </div>
+              </div>
+      </div>
+     
+
+      </div>
+  </div>
 </div>
+
+
+
 
 
 
